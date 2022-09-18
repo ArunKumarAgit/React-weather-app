@@ -1,26 +1,20 @@
-.btn,
-.btn-hide {
+.btn {
   background: #2193b0;
   background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
   background: linear-gradient(to right, #6dd5ed, #2193b0);
   border-radius: 15px;
   height: 40px;
-  margin: 5px;
   align-items: center;
   cursor: pointer;
   display: flex;
   font-size: 14px;
 
   color: white;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 30px auto;
   padding-left: 35%;
   padding-right: 35%;
 }
 
-.btn-hide {
-  margin: 20px auto;
-}
 .daily-item {
   background-color: #ffdbdb;
   border-radius: 15px;
