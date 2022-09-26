@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   Accordion,
   AccordionItem,
-  // AccordionItemHeading,
   AccordionItemButton,
   AccordionItemPanel,
 } from 'react-accessible-accordion';
@@ -59,7 +58,6 @@ const Forecast = ({ data }) => {
                     <label>Humidity:</label>
                     <label>{item.main.humidity}</label>
                   </div>
-
                   <div className="daily-details-grid-item">
                     <label>Wind speed:</label>
                     <label>{item.wind.speed} m/s</label>

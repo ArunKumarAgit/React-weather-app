@@ -7,7 +7,7 @@ const Search = ({ onSearchChange }) => {
 
   const loadOptions = inputValue => {
     return fetch(
-      `${GEO_API_URL}/cities?minPopulation=1000000&namePrefix=${inputValue}`,
+      `${GEO_API_URL}/cities?namePrefix=${inputValue}`,
       geoApiOptions
     )
       .then(response => response.json())
@@ -27,15 +27,18 @@ const Search = ({ onSearchChange }) => {
     setSearch(searchData);
     onSearchChange(searchData);
   };
-
+  //debouncing time for delaying in http request
+  //loadOptions for giving options when we enter one or two characters
   return (
-    <AsyncPaginate
-      placeholder="Search for city"
-      debounceTimeout={1000}
-      value={search}
-      onChange={handleOnChange}
-      loadOptions={loadOptions}
-    />
+    <>
+      <AsyncPaginate
+        placeholder="Search for city"
+        debounceTimeout={1000}
+        value={search}
+        onChange={handleOnChange}
+        loadOptions={loadOptions}
+      />
+    </>
   );
 };
 
